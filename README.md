@@ -50,3 +50,18 @@ Este é um projeto simples de CRUD (Create, Read, Update, Delete) para gerenciam
 4. Acesse no navegador:
   http://localhost:8080/ → Página inicial
 
+🔐 Login e Perfis de Acesso
+Ao iniciar a aplicação, o sistema possui dois usuários em memória com perfis distintos:
+| Usuário | Senha | Perfil | Redirecionado para | 
+| admin | 123qwe!@# | ADMIN | /crud (cadastro/edição) | 
+| usuario | 123qwe123 | USER | / (somente visualização) | 
+
+
+- O login é feito automaticamente pelo Spring Security.
+- Cada perfil tem acesso a rotas diferentes:
+- ADMIN: pode cadastrar, editar e excluir usuários.
+- USER: apenas visualizar os usuários cadastrados.
+- Após o cadastro de um novo usuário, o sistema retorna automaticamente para a tela de login.
+Caso deseje trocar de perfil, basta clicar em "Trocar de Usuário", que faz o logout e redireciona para a tela de login novamente.
+
+
