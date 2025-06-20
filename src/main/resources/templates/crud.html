@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Usuários</title>
+    <link rel="stylesheet" href="/css/style.css">
+	<script src="/js/script.js" defer></script> 
+</head>
+<body>
+    <h1>Gerenciar Usuários</h1>
+    <form id="formUsuario">
+        <input type="hidden" id="id">
+        <label>Nome:</label>
+        <input type="text" id="nome" required>
+        <label>Email:</label>
+        <input type="email" id="email" required>
+        <button type="submit">Salvar</button>
+    </form>
+    <div id="listaUsuarios"></div>
+    <a href="/" class="btn">Voltar</a>
+    <script src="script.js"></script>
+</body>
+</html>
