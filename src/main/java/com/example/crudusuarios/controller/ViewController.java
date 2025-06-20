@@ -4,25 +4,27 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * Controlador responsável por mapear rotas de visualização (views).
- * Retorna os nomes dos templates HTML localizados em: src/main/resources/templates
+ * Controlador responsável por exibir as páginas da aplicação (views).
+ * Retorna os nomes dos arquivos HTML dentro de src/main/resources/templates.
  */
 @Controller
 public class ViewController {
 
     /**
-     * Redireciona a rota raiz ("/") para o arquivo index.html.
+     * Mapeia a raiz do site ("/") e renderiza a tela de listagem de usuários.
+     * Exemplo: GET http://localhost:8080/
      */
     @GetMapping("/")
     public String index() {
-        return "index";  // Renderiza o template index.html
+        return "index"; // Renderiza o arquivo index.html (sem extensão)
     }
 
     /**
-     * Redireciona a rota "/crud" para o arquivo crud.html.
+     * Mapeia a rota "/crud" e renderiza a página de gerenciamento de usuários.
+     * Exemplo: GET http://localhost:8080/crud
      */
     @GetMapping("/crud")
     public String crud() {
-        return "crud";  // Renderiza o template crud.html
+        return "crud"; // Renderiza o arquivo crud.html
     }
 }

@@ -5,20 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD Usuários</title>
     <link rel="stylesheet" href="/css/style.css">
-	<script src="/js/script.js" defer></script> 
+    <script src="/js/script.js" defer></script>
 </head>
 <body>
     <h1>Gerenciar Usuários</h1>
+
     <form id="formUsuario">
         <input type="hidden" id="id">
+
         <label>Nome:</label>
-        <input type="text" id="nome" required>
-        <label>Email:</label>
-        <input type="email" id="email" required>
+        <input type="text" id="nome" required minlength="3" maxlength="100" pattern="[\\p{L}\\p{N} ]+">
+
+        <label>CPF:</label>
+        <input type="text" id="cpf" required placeholder="000.000.000-00">
+
+        <fieldset>
+            <legend>Endereço</legend>
+
+            <label>CEP:</label>
+            <input type="text" id="cep" required placeholder="00000-000">
+
+            <label>Logradouro:</label>
+            <input type="text" id="logradouro" required>
+
+            <label>Bairro:</label>
+            <input type="text" id="bairro" required>
+
+            <label>Cidade:</label>
+            <input type="text" id="cidade" required>
+
+            <label>UF:</label>
+            <input type="text" id="uf" required maxlength="2">
+
+            <label>Complemento:</label>
+            <input type="text" id="complemento" required>
+        </fieldset>
+
+        <fieldset id="telefones">
+            <legend>Telefones</legend>
+            <!-- Campos serão adicionados via JavaScript -->
+        </fieldset>
+        <button type="button" onclick="adicionarTelefone()">+ Telefone</button>
+
+        <fieldset id="emails">
+            <legend>E-mails</legend>
+            <!-- Campos serão adicionados via JavaScript -->
+        </fieldset>
+        <button type="button" onclick="adicionarEmail()">+ E-mail</button>
+
         <button type="submit">Salvar</button>
     </form>
+
     <div id="listaUsuarios"></div>
     <a href="/" class="btn">Voltar</a>
-    <script src="script.js"></script>
 </body>
 </html>
