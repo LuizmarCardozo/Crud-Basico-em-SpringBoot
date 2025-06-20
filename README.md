@@ -42,7 +42,8 @@ Este é um projeto simples de CRUD (Create, Read, Update, Delete) para gerenciam
 
 1. Clone o repositório:
    ```bash
-
+   https://github.com/LuizmarCardozo/Crud-Basico-em-SpringBoot.git
+   
 2. Abra o projeto em sua IDE favorita (IntelliJ, VSCode, Eclipse).
 3. Execute a classe principal:
   CrudUsuariosApplication.java
